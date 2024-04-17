@@ -1,16 +1,3 @@
-// User                    Password                              funzionalitá
-// operator             nessuna password                 Solo vede, Nessun commando abilitato
-// supervisor          1221                                      Solo Movimenti manuali
-// maintenance      3ff4                                        Tutto aperto
-
-// Bottoni Bloccati Operator:
-// Manual / Auto
-
-// Bottoni Bloccati per Supervisor:
-// Copy Actual position in Position page
-// Set position in Position
-
-// Maintenance: Nessun Blocco
 
 // =================================
 // Initialise accounts and controls
