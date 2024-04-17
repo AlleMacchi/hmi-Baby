@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMI-BABY</title>
+    <!-- MY CSS  -->
+    <link rel="stylesheet" href="assets/css/main.css">   
+    <!-- JQuery  -->
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div id="body">
+    <div id="warning">
+        Please rotate your device to landscape mode for the best experience.
+    </div>
+
+    <div id="contents" class="container-fluid">
+        <div id="header" class="bg-dark"></div>
+        <div id="navbar" class="bg-dark"></div>
+        <div id="container-section">
+                <section id="section1" class="page bg-dark"></section>
+                <section id="section2" class="page bg-dark"></section>
+                <section id="section3" class="page bg-dark"></section>
+                <section id="section5" class="page bg-dark"></section>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- ====================== SCRIPTS ======================================================== --> 
+  <!-- GLOBAL -->
+  <script type="text/javascript" src="assets/js/global.js"></script>
+
+  <script>
+
+
+function updateStep(){
+    url="IOWriteNewStep.html";
+    name='"HMI_PLC".FromHMI.Setting.Machine.newStep';
+    val=$('input[id=selectedOption]').val();
+    sdata=escape(name)+'='+val;
+    $.post(url,sdata,function(result){});
+  }
+
+
+  function selectOption(option) {
+    document.getElementById("selectedOption").value = option;
+    document.querySelector(".dropdown-content").style.display = "none";
+
+    updateStep();
+  }
+
+  function toggleDropdown() {
+    var dropdownContent = document.querySelector(".dropdown-content");
+    dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+  }
+
+
+
+//==================================================================
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("setPositionLogical").addEventListener("keypress", function(event) {
+            // Check if the pressed key is the Enter key
+            if (event.key === "Enter") {
+                // Prevent the default action (e.g., form submission)
+                event.preventDefault();
+            }
+        });
+
+  document.getElementById("setPosition_mm").addEventListener("keypress", function(event) {
+      // Check if the pressed key is the Enter key
+      if (event.key === "Enter") {
+          // Prevent the default action (e.g., form submission)
+          event.preventDefault();
+      }
+  });
+
+  document.getElementById("setCarrierSpeed").addEventListener("keypress", function(event) {
+      // Check if the pressed key is the Enter key
+      if (event.key === "Enter") {
+          // Prevent the default action (e.g., form submission)
+          event.preventDefault();
+      }
+  });
+  document.getElementById("setLifterSpeed").addEventListener("keypress", function(event) {
+      // Check if the pressed key is the Enter key
+      if (event.key === "Enter") {
+          // Prevent the default action (e.g., form submission)
+          event.preventDefault();
+      }
+  });
+});
+//==================================================================
+  </script>
+
+  <!-- HEADER -->
+  <script type="text/javascript" src="assets/js/header/html.js"></script>
+  <script type="text/javascript" src="assets/js/header/general_command_html.js"></script>
+  <script type="text/javascript" src="assets/js/header/general_command.js"></script>
+  <script type="text/javascript" src="assets/js/header/joystick_html.js"></script>
+  <script type="text/javascript" src="assets/js/header/buttons.js"></script>
+  <script type="text/javascript" src="assets/js/header/joystick.js"></script>
+  <script type="text/javascript" src="assets/js/header/joystick_comands.js"></script>
+  <script type="text/javascript" src="assets/js/header/command_close.js"></script>
+  <script type="text/javascript" src="assets/js/header/command_open.js"></script>
+  <script type="text/javascript" src="assets/js/header/man_command_close.js"></script>
+  <script type="text/javascript" src="assets/js/header/man_command_open.js"></script>
+  <script type="text/javascript" src="assets/js/header/status_machine.js"></script>
+<!-- NAVBAR -->
+  <script type="text/javascript" src="assets/js/navbar/html.js"></script>
+  <script type="text/javascript" src="assets/js/navbar/script.js"></script>
+<!-- SECTION 1 -->
+  <script type="text/javascript" src="assets/js/section1/html.js"></script>
+  <script type="text/javascript" src="assets/js/section1/home_status.js"></script>
+  <script type="text/javascript" src="assets/js/section1/Steps_Status.js"></script>
+  <script type="text/javascript" src="assets/js/section1/Steps_command.js"></script>
+<!-- SECTION 2 -->
+  <script type="text/javascript" src="assets/js/section2/html.js"></script>
+  <script type="text/javascript" src="assets/js/section2/buttons.js"></script>
+  <script type="text/javascript" src="assets/js/section2/buttons_command.js"></script>
+  <script type="text/javascript" src="assets/js/section2/status_values.js"></script>
+<!-- SECTION 3 -->
+  <script type="text/javascript" src="assets/js/section3/html.js"></script>
+  <script type="text/javascript" src="assets/js/section3/dropdown.js"></script>
+  <script type="text/javascript" src="assets/js/section3/buttons_command.js"></script>
+  <script type="text/javascript" src="assets/js/section3/status_values.js"></script>
+<!-- SECTION 5 -->
+  <script type="text/javascript" src="assets/js/section5/html.js"></script>
+  <script type="text/javascript" src="assets/js/section5/alarms_list.js"></script>  
+<!-- READ I/O -->   
+    <script type="text/javascript" src="assets/js/Read.js"></script>
+</body>
+</html>

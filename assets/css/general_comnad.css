@@ -1,0 +1,57 @@
+.button{
+    background: var(--gradient);
+    border: 2px solid #222;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+    color: black;
+}
+
+.selected{
+    box-shadow: var(--box-shadow-selected);
+    color: #c3f2f5;
+    text-shadow: 0 0 5px #0f5a5e,
+                0 0 8px #0f5a5e;
+}
+
+.selector{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    margin-bottom: 0;
+}
+
+.selector>button{
+    width: 33%;
+}
+
+.container-general-command-btn{
+    position: absolute;
+    top: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
+  }
+
+  .container-reset{
+    position: absolute;
+    top: 270px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #btn_RESET{
+    width: 80%;
+    height: 50px;
+  }

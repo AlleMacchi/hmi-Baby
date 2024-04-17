@@ -1,0 +1,77 @@
+ /* ================================ */
+  /* BUTTON ON/OFF */
+  .btn_cmd_container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn_circle_outlet{
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background: #777575;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+  
+  }
+  .btn_circle_inlet{
+    height: 85%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to bottom,
+        #555353,
+        #303030
+    );   
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+  .btn_cmd{
+    height:65%;
+    width: 65%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to top,
+        #555353,
+        #303030
+    );
+    text-align: center;
+    border: none;
+    font-size: 12px;
+    color: black;
+    font-weight: 600;
+    caret-color: transparent;
+    cursor: pointer;    
+  }
+  
+  .pressed{
+    color: #c3f2f5;
+    text-shadow: 0 0 5px #0f5a5e,
+                0 0 8px #0f5a5e;
+  
+  }
+  
+  .pressed img{
+    filter: var(--filter-blue);
+  }
+  
+  .btn_circle_outlet.pressed{
+    background: linear-gradient(
+        -135deg,
+        #00ffe2,
+        #2b6b73
+    );
+    filter: drop-shadow(0 0 1px #2b6b73) drop-shadow(0 0 1.6px #00ffe2)
+            drop-shadow(0 0 2.1px #2b6b73) drop-shadow(0 0 5.2px #00ffe2);
+  }

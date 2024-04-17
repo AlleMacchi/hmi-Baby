@@ -1,0 +1,14 @@
+.row_1{height: calc(100vh/12) !important;}
+.row_2{height: calc((100vh / 12)*2) !important;}
+.row_3{height: calc((100vh / 12)*3) !important;}
+.row_4{height: calc((100vh / 12)*4) !important;}
+.row_5{height: calc((100vh / 12)*5) !important;}
+.row_6{height: calc((100vh / 12)*6) !important;}
+.row_7{height: calc((100vh / 12)*7) !important;}
+.row_8{height: calc((100vh / 12)*8) !important;}
+.row_9{height: calc((100vh / 12)*9) !important;}
+.row_10{height: calc((100vh / 12)*10) !important;}
+.row_11{height: calc((100vh / 12)*11) !important;}
+.row_12{height: 100vh !important;}
+
+.top_1{top: calc(100vh/12) !important;}
