@@ -4,7 +4,7 @@ document.getElementById("offcanvasCommand").innerHTML = `
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="cmd_close" > <img src="assets/icons/close.svg"> </button>
 </div>
 <div class="offcanvas-body">
-    <div class="selector">
+    <div id="selector-section" class="selector">
         <button id="btn_Manual" class="button selected">
             Manual
         </button>

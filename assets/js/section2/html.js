@@ -64,7 +64,7 @@ document.getElementById("section2").innerHTML = `
   </div>
 
 
-<div class="container-go-position">
+<div id="commands-section" class="container-go-position">
 
   <div class="container-sector-go container-sector-go-custom">
     

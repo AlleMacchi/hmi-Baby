@@ -28,6 +28,10 @@ document.getElementById("btn_section5").addEventListener("click", function() {
     scrollToSection("section5");
 });
 
+document.getElementById("logButton").addEventListener("click", function() {
+    scrollToSection("section6");
+});
+
 
 // Function to scroll to the specified section
 function scrollToSection(sectionId) {

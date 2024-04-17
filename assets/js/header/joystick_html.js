@@ -5,7 +5,7 @@ document.getElementById("offcanvasScrolling").innerHTML = `
 </div>
 <h5>JOYSTICK</h5>
 <div class="offcanvas-body">
-<div class="joystick">
+<div id="joystick-section" class="joystick">
     <div class="btn-top joystick-btn">
         <div id="btn_circle_out_UP" class="btn_circle_outlet" >
             <div class="btn_circle_inlet">

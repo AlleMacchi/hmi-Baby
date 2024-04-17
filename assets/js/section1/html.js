@@ -214,8 +214,8 @@ document.getElementById("section1").innerHTML = `
     </div>
 
  
-  <div class="form_container">
-    <div class="dropdown">
+  <div id="steps-section" class="form_container">
+    <div id="steps-section" class="dropdown">
       <button type="button" class="btn btn-secondary dropdown-toggle" onclick="toggleDropdown()">
         Select Step
       </button>
