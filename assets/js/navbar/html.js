@@ -10,7 +10,7 @@ document.getElementById("navbar").innerHTML = `
     </div>      
     </div>    
     <div class="container flex-column">
-    <button type="button" class="btn no-padding login-btn">LOG IN</button>
+    <button type="button" id="logButton" class="btn page-btn no-padding login-btn">LOG IN</button>
     </div>   
 </nav>
 `;

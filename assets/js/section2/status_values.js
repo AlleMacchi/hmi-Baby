@@ -82,13 +82,13 @@ function updateStatusSector2(){
 
 function updateStatusPosition(){    
     if (CarrierInPosition) {
-        document.getElementById("status-position").textContent('IN POSITION');
+        document.getElementById("status-position").textContent ='IN POSITION';
     }else if (CarrierIsMoving){
-        document.getElementById("status-position").textContent('IS MOVING');
+        document.getElementById("status-position").textContent ='IS MOVING';
     } else if (CarrierIsFault){
-        document.getElementById("status-position").textContent('IN FAULT');
+        document.getElementById("status-position").textContent ='IN FAULT';
     } else {
-        document.getElementById("status-position").textContent('UNKNOWN');
+        document.getElementById("status-position").textContent ='UNKNOWN';
     }
 }
 
