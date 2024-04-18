@@ -60,8 +60,12 @@ function selStateMachine(){
 function selModeMachine(){
     if (StatusMode){
         $('#current-mode').text("AUTOMATIC");
+        document.getElementById("btn_Manual").classList.remove("selected");
+        document.getElementById("btn_Automatic").classList.add("selected");
       }else{
         $('#current-mode').text("MANUAL");
+        document.getElementById("btn_Automatic").classList.remove("selected");
+        document.getElementById("btn_Manual").classList.add("selected");
       }
 }
 

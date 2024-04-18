@@ -4,6 +4,11 @@ var RowStoreLogicalPosition;
 var DirStoreLogicalPosition;
 var ColStoreLogicalPosition;
 
+// Aggiungi
+var Battery = 0;
+var LogicalPhysical = false;
+
+
 // Global for Read PLC Data
 
 var StatusMachine = 0;

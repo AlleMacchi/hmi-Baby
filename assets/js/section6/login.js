@@ -1,4 +1,3 @@
-
 // =================================
 // Initialise accounts and controls
 //==================================
@@ -39,7 +38,10 @@ function login() {
     //set access level
     configureAccess(username);
     //change login button to logout
-    document.getElementById("logButton").innerHTML = "LOGOUT";
+    console.log(document.getElementById("logButton").style.backgroundImage);
+    document.getElementById("logButton").classList.remove("login-btn");
+    document.getElementById("logButton").classList.add("logout-btn");
+    console.log(document.getElementById("logButton").style.backgroundImage);
     document.getElementById("login-logout").textContent = "LOGOUT";
     document.getElementById("login-logout").setAttribute("onclick", "logout()");
 
@@ -131,11 +133,12 @@ function logout() {
   document.getElementById("password").disabled = false;
   document.getElementById("username").style.opacity = 1;
   document.getElementById("password").style.opacity = 1;
-  //reset access level
-  configureAccess(username);
   //reset login button
   document.getElementById("login-logout").innerHTML = "LOGIN";
   document.getElementById("login-logout").setAttribute("onclick", "login()");
+
+  //reset access level
+  configureAccess(username);
   //display message
   alert("Logged out successfully");
 }

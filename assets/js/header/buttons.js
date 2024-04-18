@@ -22,6 +22,12 @@ document.getElementById("btn_START").addEventListener("mouseup", function() {
     document.getElementById("btn_circle_out_START").classList.remove("pressed");
 });
 
+document.getElementById("btn_START").addEventListener("mouseleave", function() {
+    this.classList.remove("pressed");
+    document.getElementById("btn_circle_out_START").classList.remove("pressed");
+});
+
+
 // ===================================
 // BUTTON STOP
 // ===================================
@@ -46,6 +52,11 @@ document.getElementById("btn_STOP").addEventListener("mouseup", function() {
     document.getElementById("btn_circle_out_STOP").classList.remove("pressed");
 });
 
+document.getElementById("btn_STOP").addEventListener("mouseleave", function() {
+    this.classList.remove("pressed");
+    document.getElementById("btn_circle_out_STOP").classList.remove("pressed");
+});
+
 // ===================================
 // BUTTON RESET
 // ===================================
@@ -63,6 +74,9 @@ document.getElementById("btn_RESET").addEventListener("mousedown", function() {
 });
 
 document.getElementById("btn_RESET").addEventListener("mouseup", function() {
+    this.classList.remove("selected");
+});
+document.getElementById("btn_RESET").addEventListener("mouseleave", function() {
     this.classList.remove("selected");
 });
 
@@ -99,7 +113,3 @@ document.getElementById("btn_Manual").addEventListener("mousedown", function() {
 
     document.getElementById("btn-setStep").classList.remove("disabled-button");
 });
-
-
-
-

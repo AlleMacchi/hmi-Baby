@@ -298,3 +298,59 @@
     height: clamp(1.25rem, 0.9173rem + 0.7981vw, 1.875rem);
     width: clamp(3.125rem, -0.202rem + 7.9808vw, 9.375rem);
   }
+
+
+  #LifterSetSpeed,#CarrierSetSpeed{
+    color: var(--light-blue);
+  }
+
+  .battery-container{
+    width: calc((100vw/10)*1);
+    height: calc(20% - 10px);
+    background: rgb(171, 171, 171);
+    border: solid 1px black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: clamp(0.5rem, 0.2754rem + 0.7789vw, 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+  }
+
+  #sensorBatteryLabel{
+    position: absolute;
+    top: clamp(5%,5% + 1vh,10%);
+    left: 40%;
+  }
+
+  .sensorBattery{
+    width: 100%;
+    height: 100%;
+    background: rgb(167, 167, 167);
+    border: solid 1px black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: clamp(0.5rem, 0.2754rem + 0.7789vw, 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  .activeBatterySensor {
+    background-color: var(--light-blue) !important;
+    box-shadow: 0 0 15px 3px var(--light-blue) !important;
+  }
+  
+  #sensorBattery.activeSensor {
+    background-color: transparent !important;
+    box-shadow: 0 0 15px 3px red !important;
+  }
+  
+  .low-batterySensor {
+    background-color: #ff0000 !important; /* Red background for low battery */
+    box-shadow: 0 0 15px 3px red !important;
+  }
