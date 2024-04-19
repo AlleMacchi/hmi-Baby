@@ -69,11 +69,15 @@ function selModeMachine(){
       }
 }
 
+function updateBabyNO(){
+    $('#agv-number').text(`${BabyNo}`);
+}
 
 
 function updateStatus(){
     selStateMachine();
-    selModeMachine();      
+    selModeMachine();
+    updateBabyNO();      
 }
 
 setInterval(updateStatus, 1000);

@@ -11,7 +11,9 @@ document.getElementById("navbar").innerHTML = `
     </div>      
     </div>    
     <div class="container flex-column">
-    <button type="button" id="logButton" class="btn page-btn no-padding login-btn"></button>
+    <img id="profileIcon" src="./assets/icons/operator.svg"/"></img>
+    <div type="button" id="profile" class="profile">Operator</div>
+    <button type="button" id="logButton" class="btn page-btn no-padding login-btn"><img src="./assets/icons/login.svg"/></button>
     </div>   
 </nav>
 `;

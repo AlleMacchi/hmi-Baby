@@ -38,12 +38,11 @@ function login() {
     //set access level
     configureAccess(username);
     //change login button to logout
-    console.log(document.getElementById("logButton").style.backgroundImage);
-    document.getElementById("logButton").classList.remove("login-btn");
-    document.getElementById("logButton").classList.add("logout-btn");
-    console.log(document.getElementById("logButton").style.backgroundImage);
+    document.getElementById("logButton").children[0].src = './assets/icons/logout.svg';
     document.getElementById("login-logout").textContent = "LOGOUT";
     document.getElementById("login-logout").setAttribute("onclick", "logout()");
+    document.getElementById("profile").textContent = username;
+    document.getElementById("profileIcon").src = './assets/icons/' + username + '.svg';
 
     //disable inputs
     document.getElementById("username").disabled = true;
@@ -134,8 +133,11 @@ function logout() {
   document.getElementById("username").style.opacity = 1;
   document.getElementById("password").style.opacity = 1;
   //reset login button
+  document.getElementById("logButton").children[0].src = './assets/icons/login.svg';
   document.getElementById("login-logout").innerHTML = "LOGIN";
   document.getElementById("login-logout").setAttribute("onclick", "login()");
+  document.getElementById("profile").textContent = username;
+  document.getElementById("profileIcon").src = './assets/icons/operator.svg';
 
   //reset access level
   configureAccess(username);

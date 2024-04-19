@@ -11,7 +11,7 @@ document.getElementById("header").innerHTML = `
 </div>
 <div class="agv-number-container">
   <div class="agv-number-label">Baby No</div>
-  <div class="agv-number">xx</div>
+  <div id="agv-number" "class="agv-number">xx</div>
 </div>
 <div class="manual-container">
   <button  id="command-btn" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCommand" aria-controls="offcanvasScrolling">ON/OFF</button>

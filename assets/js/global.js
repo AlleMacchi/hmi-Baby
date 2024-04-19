@@ -7,6 +7,7 @@ var ColStoreLogicalPosition;
 // Aggiungi
 var Battery = 0;
 var LogicalPhysical = false;
+var BabyNo = 10;
 
 
 // Global for Read PLC Data
