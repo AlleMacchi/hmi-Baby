@@ -140,7 +140,37 @@ $(document).ready(function(){
         // Task Number
         TaskNumber = data.Array_15;
 
+        // //Watchdog
+        // Watchdog = 0; //data.Array_X
+        // updateWatchdog();  // update url and name
+
+
+
+
       }
   )},1500);       
 });
 
+
+function updateWatchdog(){
+  // e.preventDefault();
+    var url = "IOWriteWatchdog.html";   // update here
+    var name = 'X';                     //update here
+    var val = !Watchdog;
+    var sdata = encodeURIComponent(name) + '=' + val;
+    console.log(val);                  // remove this after testing
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            // Request finished, do something with the response if needed
+        }
+    };
+    xhr.send(sdata);
+
+}
+
+// for Test
+// setInterval(updateWatchdog,1500);

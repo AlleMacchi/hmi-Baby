@@ -1,8 +1,8 @@
 document.getElementById("offcanvasCommand").innerHTML = `
 <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">GENERAL COMMANDS</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="cmd_close" > <img src="assets/icons/close.svg"> </button>
 </div>
+<h5 class="offcanvas-title" id="offcanvasScrollingLabel">GENERAL COMMANDS</h5>
 <div class="offcanvas-body">
     <div id="selector-section" class="selector">
         <button id="btn_Manual" class="button selected">

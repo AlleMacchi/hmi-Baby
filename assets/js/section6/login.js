@@ -38,11 +38,13 @@ function login() {
     //set access level
     configureAccess(username);
     //change login button to logout
-    document.getElementById("logButton").children[0].src = './assets/icons/logout.svg';
+    document.getElementById("logButton").children[0].src =
+      "./assets/icons/logout.svg";
     document.getElementById("login-logout").textContent = "LOGOUT";
     document.getElementById("login-logout").setAttribute("onclick", "logout()");
     document.getElementById("profile").textContent = username;
-    document.getElementById("profileIcon").src = './assets/icons/' + username + '.svg';
+    document.getElementById("profileIcon").src =
+      "./assets/icons/" + username + ".svg";
 
     //disable inputs
     document.getElementById("username").disabled = true;
@@ -52,7 +54,6 @@ function login() {
 
     // scroll to section 1 and display messages
     scrollToSection("section1");
-    confirm("Logged in successfully as " + username);
   } else {
     //display message error
     alert("Invalid username or password");
@@ -72,7 +73,7 @@ function configureAccess(username) {
   }
 
   //display in coloe access level
-  console.log("Access level: ", username);
+  // console.log("Access level: ", username);
 
   // Enable all Controls (from previous interactions)
   controls.forEach((id) => {
@@ -133,16 +134,58 @@ function logout() {
   document.getElementById("username").style.opacity = 1;
   document.getElementById("password").style.opacity = 1;
   //reset login button
-  document.getElementById("logButton").children[0].src = './assets/icons/login.svg';
+  document.getElementById("logButton").children[0].src =
+    "./assets/icons/login.svg";
   document.getElementById("login-logout").innerHTML = "LOGIN";
   document.getElementById("login-logout").setAttribute("onclick", "login()");
   document.getElementById("profile").textContent = username;
-  document.getElementById("profileIcon").src = './assets/icons/operator.svg';
+  document.getElementById("profileIcon").src = "./assets/icons/operator.svg";
 
   //reset access level
   configureAccess(username);
   //display message
-  alert("Logged out successfully");
 }
 
 configureAccess(username);
+
+let idleTime = 0; // in seconds
+let idleLimit = 300; // in seconds
+let isTabActive = true; // Assume the tab is active initially
+
+// Reset the idle timer on any of these events
+function resetIdleTimer() {
+  if (isTabActive) {
+    idleTime = 0; // Reset idle time
+    // console.log("Idle time reset.");
+  }
+}
+
+// Increment the idle time counter every second
+setInterval(() => {
+  if (isTabActive) {
+    idleTime++;
+    // console.log("Idle time: ", idleTime);
+    if (idleTime >= idleLimit) {
+      if (username != "operator") {
+        alert(`The ${username} user has been inactive for ${idleLimit/60} min, logging out...`);
+        logout();
+      }
+      idleTime = 0; // Reset idle time
+    }
+  }
+}, 1000); // check every second
+
+// Listen for any of the following events to reset the idle timer
+window.addEventListener("mousemove", resetIdleTimer);
+window.addEventListener("mousedown", resetIdleTimer);
+window.addEventListener("click", resetIdleTimer);
+window.addEventListener("scroll", resetIdleTimer);
+window.addEventListener("keypress", resetIdleTimer);
+
+// Handle tab visibility change
+document.addEventListener("visibilitychange", () => {
+  isTabActive = !document.hidden;
+  if (isTabActive) {
+    resetIdleTimer(); // Reset timer if the tab is active
+  }
+});
