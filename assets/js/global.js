@@ -30,6 +30,7 @@ var MotherDetectedSide_B = false;
 var PathNotFreeSide_A = false;
 var PathNotFreeSide_B = false;
 var ShuttleOnBoard= false;
+var SelPhysicalLogical= false;
 
 var StatusStep = 0;
 var StatusCarrierActPositon_logicalRow = 0;
@@ -41,6 +42,7 @@ var TaskNumber = 0;
 var CarrierActSpeed = 0.0;
 var CarrierActPosition_mm = 0.0;
 var Position_mm = 0.0;
+var BatteryLevel = 0;
 
 var Alarm_Controller_000 = false;
 var Alarm_Controller_001 = false;

@@ -52,6 +52,11 @@ $(document).ready(function(){
         // Result from write
         PositionResult = data.Array_7;
 
+        // Selection Physical or Logical
+        SelPhysicalLogical = data.SelPhysicalLogical;
+
+        // Battery Level
+        BatteryLevel = data.Array_16;
 
         // Alarms
         // Controller
