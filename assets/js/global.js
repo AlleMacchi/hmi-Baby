@@ -5,7 +5,6 @@ var DirStoreLogicalPosition;
 var ColStoreLogicalPosition;
 
 // Aggiungi
-var SelPhysicalLogical = false;
 var BabyNo = 10;
 var Watchdog = 0;
 
