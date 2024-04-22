@@ -22,6 +22,12 @@ document.getElementById("btn_UP").addEventListener("mouseup", function() {
     document.getElementById("btn_circle_out_UP").classList.remove("pressed");
 });
 
+document.getElementById("btn_UP").addEventListener("mouseleave", function() {
+    this.classList.remove("pressed");
+    document.getElementById("btn_circle_out_UP").classList.remove("pressed");
+});
+
+
 // ===================================
 // BUTTON RIGHT
 // ===================================
@@ -42,6 +48,11 @@ document.getElementById("btn_RIGHT").addEventListener("mousedown", function() {
 });
 
 document.getElementById("btn_RIGHT").addEventListener("mouseup", function() {
+    this.classList.remove("pressed");
+    document.getElementById("btn_circle_out_RIGHT").classList.remove("pressed");
+});
+
+document.getElementById("btn_RIGHT").addEventListener("mouseleave", function() {
     this.classList.remove("pressed");
     document.getElementById("btn_circle_out_RIGHT").classList.remove("pressed");
 });
@@ -70,6 +81,11 @@ document.getElementById("btn_DOWN").addEventListener("mouseup", function() {
     document.getElementById("btn_circle_out_DOWN").classList.remove("pressed");
 });
 
+document.getElementById("btn_DOWN").addEventListener("mouseleave", function() {
+    this.classList.remove("pressed");
+    document.getElementById("btn_circle_out_DOWN").classList.remove("pressed");
+});
+
 // ===================================
 // BUTTON LEFT
 // ===================================
@@ -90,6 +106,11 @@ document.getElementById("btn_LEFT").addEventListener("mousedown", function() {
 });
 
 document.getElementById("btn_LEFT").addEventListener("mouseup", function() {
+    this.classList.remove("pressed");
+    document.getElementById("btn_circle_out_LEFT").classList.remove("pressed");
+});
+
+document.getElementById("btn_LEFT").addEventListener("mouseleave", function() {
     this.classList.remove("pressed");
     document.getElementById("btn_circle_out_LEFT").classList.remove("pressed");
 });

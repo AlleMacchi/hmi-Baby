@@ -184,8 +184,10 @@ ol, ul {
 .offcanvas-header {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
 }
+
 .h5, h5 {
     font-size: 1.25rem;
 }
@@ -198,12 +200,11 @@ ol, ul {
 }
 .offcanvas-title {
     margin-bottom: 0;
-    line-height: var(--bs-offcanvas-title-line-height);
 }
 
 .offcanvas-header .btn-close {
     padding: calc(var(--bs-offcanvas-padding-y)* .5) calc(var(--bs-offcanvas-padding-x)* .5);
-    margin: calc(-.5* var(--bs-offcanvas-padding-y)) calc(-.5* var(--bs-offcanvas-padding-x)) calc(-.5* var(--bs-offcanvas-padding-y)) auto;
+    margin: calc(-.5* var(--bs-offcanvas-padding-y)) calc(-.5* var(--bs-offcanvas-padding-x)) calc(-.5* var(--bs-offcanvas-padding-y));
 }
 
 
@@ -234,8 +235,8 @@ ol, ul {
     --bs-offcanvas-zindex: 1045;
     --bs-offcanvas-width: 400px;
     --bs-offcanvas-height: 30vh;
-    --bs-offcanvas-padding-x: 1rem;
-    --bs-offcanvas-padding-y: 1rem;
+    --bs-offcanvas-padding-x: 0.5rem;
+    --bs-offcanvas-padding-y: 0.5rem;
     --bs-offcanvas-color: var(--bs-body-color);
     --bs-offcanvas-bg: var(--bs-body-bg);
     --bs-offcanvas-border-width: var(--bs-border-width);

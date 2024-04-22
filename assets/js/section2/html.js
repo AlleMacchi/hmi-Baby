@@ -13,6 +13,10 @@ document.getElementById("section2").innerHTML = `
         <div class="sensor" id="sensor-lift-down">B</div>
         <div class="sensor" id="sensor-Before-Cargo-side-A">C</div>
         <div class="sensor" id="sensor-After-Cargo-side-A">D</div>
+        <div class="battery-container">
+          <h1 id="sensorBatteryLabel">Battery%</h1>
+          <div class="sensorBattery" id="sensorBattery"></div>
+        </div>
         <div class="sensor" id="sensor-Before-Cargo-side-B">E</div>
         <div class="sensor" id="sensor-After-Cargo-side-B">F</div>
         <div class="sensor" id="sensor-Mother-detects-side-A">G</div>
@@ -86,7 +90,8 @@ document.getElementById("section2").innerHTML = `
           Confirm
       </button>          
     </div>
-    <h4>CARRIER SPEED</h4>
+    <h4>CARRIER SET SPEED</h4>
+    <h4 id="CarrierSetSpeed"></h4>
     <div class="form_container">
       <form class="form">
           <input 
@@ -105,7 +110,8 @@ document.getElementById("section2").innerHTML = `
           Confirm
       </button>          
     </div>
-    <h4>LIFTER SPEED</h4>
+    <h4>LIFTER SET SPEED</h4>
+    <h4 id="LifterSetSpeed"></h4>
   </div>
   
 
