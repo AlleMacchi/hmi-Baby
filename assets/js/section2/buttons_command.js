@@ -222,10 +222,9 @@ function onTouchTrueSetCARRIERSPD(event) {
    
     if (val<1 || val>10) {
         alert('Value must be between 1 and 10');
-        document.getElementById("setCarrierSpeed").textContent = '';
-        document.getElementById("CarrierSetSpeed").textContent = '';
-    }else{
-        document.getElementById("CarrierSetSpeed").textContent = val;
+        document.getElementById("setCarrierSpeed").value = '';
+    }else{ 
+        document.getElementById("CarrierSetSpeed").textContent = `${val}%`;
     }
 }
 
@@ -248,10 +247,9 @@ document.getElementById("btn-setLifterSpeed").addEventListener("touchstart", onT
     
     if (val<1 || val>100) {
         alert('Value must be between 1 and 100');
-        document.getElementById("setLifterSpeed").textContent = '';
-        document.getElementById("LifterSetSpeed").textContent = '';
+        document.getElementById("setLifterSpeed").value = '';
     }else{
-        document.getElementById("LifterSetSpeed").textContent = val;
+        document.getElementById("LifterSetSpeed").textContent = `${val}%`;
     }
 
 }

@@ -145,11 +145,11 @@ $(document).ready(function(){
         // Task Number
         TaskNumber = data.Array_15;
 
-        // //Watchdog
-        // Watchdog = 0; //data.Array_X
-        // updateWatchdog();  // update url and name
+        // Update Selection Physical or Logical
+        SelPhysicalLogical = data.SelPhysicalLogical;
 
-
+        //Watchdog
+        updateWatchdog();
 
 
       }
@@ -159,11 +159,11 @@ $(document).ready(function(){
 
 function updateWatchdog(){
   // e.preventDefault();
-    var url = "IOWriteWatchdog.html";   // update here
-    var name = 'X';                     //update here
-    var val = !Watchdog;
+    Watchdog = !Watchdog;
+    var url = "IOWriteWatchdog.html";  
+    var name = '"HMI_PLC".FromHMI.Watchdog';
+    var val = Watchdog;               
     var sdata = encodeURIComponent(name) + '=' + val;
-    console.log(val);                  // remove this after testing
     
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);

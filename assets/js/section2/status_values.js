@@ -21,17 +21,17 @@ function updateStatusSector2() {
   const batteryLevelElement = document.getElementById("sensorBattery");
   const batteryLabel = document.getElementById("sensorBatteryLabel");
   if (batteryLevelElement) {
-    batteryLevelElement.style.width = `${Battery}%`;
-    batteryLabel.textContent = `${Battery}%`;
-    if (Battery == 100) {
+    batteryLevelElement.style.width = `${BatteryLevel}%`;
+    batteryLabel.textContent = `${BatteryLevel}%`;
+    if (BatteryLevel == 100) {
       batteryLabel.style.left = "40%";
       batteryLevelElement.classList.add("activeBatterySensor");
       batteryLevelElement.classList.remove("low-batterySensor");
-    } else if (Battery > 20) {
+    } else if (BatteryLevel > 20) {
       batteryLabel.style.left = "45%";
       batteryLevelElement.classList.add("activeBatterySensor");
       batteryLevelElement.classList.remove("low-batterySensor");
-    } else if(Battery == 0) {
+    } else if(BatteryLevel == 0) {
       batteryLabel.style.left = "45%";
       batteryLevelElement.classList.remove("activeBatterySensor");
       batteryLevelElement.classList.remove("low-batterySensor");
@@ -146,7 +146,7 @@ function updateStatusPosition() {
 }
 
 function updateStatusLogicalPhysical(){
-  if(LogicalPhysical){
+  if(SelPhysicalLogical){
     document.getElementById("btn_Physical").classList.remove("selected");
     document.getElementById("btn_Logical").classList.add("selected");
   }else{
@@ -156,11 +156,12 @@ function updateStatusLogicalPhysical(){
 
 }
 
+updateStatusLogicalPhysical();
+
 function updateSection2Data() {
   updateStatusSector2();
   updateLogicalStringSection_2();
   updateStatusPosition();
-  updateStatusLogicalPhysical();
 }
 
 setInterval(updateSection2Data, 1000);

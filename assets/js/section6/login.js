@@ -53,7 +53,10 @@ function login() {
     document.getElementById("password").style.opacity = 0.5;
 
     // scroll to section 1 and display messages
+    document.getElementById("logButton").classList.remove("selected");
+    document.getElementById("btn_section1").classList.add("selected");
     scrollToSection("section1");
+    
   } else {
     //display message error
     alert("Invalid username or password");

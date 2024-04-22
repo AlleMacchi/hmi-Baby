@@ -73,10 +73,11 @@ function updateBabyNO(){
     $('#agv-number').text(`${BabyNo}`);
 }
 
+selModeMachine();
 
 function updateStatus(){
     selStateMachine();
-    selModeMachine();
+    
     updateBabyNO();      
 }
 
