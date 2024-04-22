@@ -5,8 +5,7 @@ var DirStoreLogicalPosition;
 var ColStoreLogicalPosition;
 
 // Aggiungi
-var Battery = 0;
-var LogicalPhysical = false;
+var SelPhysicalLogical = false;
 var BabyNo = 10;
 var Watchdog = 0;
 
