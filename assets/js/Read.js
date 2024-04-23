@@ -148,7 +148,7 @@ async function readHtml() {
       TaskNumber = data.Array_15;
 
       // Update Selection Physical or Logical
-      SelPhysicalLogical = data.SelPhysicalLogical;
+      SelPhysicalLogical = decodedString(data.SelPhysicalLogical);
       BabyNo = data.AGV_No;
 
       //Watchdog
