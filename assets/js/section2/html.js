@@ -141,7 +141,7 @@ document.getElementById("section2").innerHTML = `
           </button>                 
       </div>
       <br>
-      <div id="set-logial-position"></div> 
+      <div id="set-logical-position"></div> 
     </div>
 
   </div>

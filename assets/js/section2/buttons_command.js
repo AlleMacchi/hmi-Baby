@@ -157,9 +157,9 @@ $(document).ready(function(){
         LogicalPositionStringa = setLogicalString(Row,Col,Dir);
         // alert(LogicalPositionStringa); 
         if (Col==null || Col==0 || Col>38) {
-            $('#set-logial-position').text('');
+            $('#set-logical-position').text('');
         } else {
-            $('#set-logial-position').text(LogicalPositionStringa);
+            $('#set-logical-position').text(LogicalPositionStringa);
         }
 
         if (Col==0 || Col>38) {
@@ -181,7 +181,7 @@ function onTouchTrueSetLOGICAL(event) {
 
     url="IOWritePositionLogical.html";
     name='"HMI_PLC".FromHMI.Setting.Carrier.PositionToReach_logical';
-    val=$('#set-logial-position').text();
+    val=$('#set-logical-position').text();
     sdata=escape(name)+'='+val;
     $.post(url,sdata,function(result){});
 }

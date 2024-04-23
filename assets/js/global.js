@@ -5,7 +5,7 @@ var DirStoreLogicalPosition;
 var ColStoreLogicalPosition;
 
 // Aggiungi
-var BabyNo = 10;
+var BabyNo = 0;
 var Watchdog = 0;
 
 
