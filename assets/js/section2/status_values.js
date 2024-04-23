@@ -156,7 +156,6 @@ function updateStatusLogicalPhysical(){
 
 }
 
-updateStatusLogicalPhysical();
 
 function updateSection2Data() {
   updateStatusSector2();

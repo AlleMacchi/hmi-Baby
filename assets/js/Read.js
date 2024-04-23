@@ -1,11 +1,12 @@
-$(document).ready(function () {
+$(document).ready(async function () {
   $.ajaxSetup({ cache: false });
-  readHtml().then(() => {
-    setInterval(readHtml, 1500);
-  });
+  await readHtml();
+  updateStatusLogicalPhysical();
+  initiateManAutoButton();
+  setInterval(readHtml, 1500);
 });
 
-function readHtml() {
+async function readHtml() {
   return new Promise((resolve, reject) => {
     $.getJSON("IORead_Array.html", function (data) {
       // Status Machine
