@@ -255,7 +255,7 @@
     font-size: clamp(0.625rem, 0.2923rem + 0.7981vw, 1.25rem);
 }
 
-  #set-logial-position{
+  #set-logical-position{
     color: var(--light-blue);
     text-shadow: var(--text-shadow-blue);
     font-size: clamp(0.625rem, 0.2923rem + 0.7981vw, 1.25rem);
