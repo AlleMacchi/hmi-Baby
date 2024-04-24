@@ -129,9 +129,8 @@ function onTouchFalseGO(event) {
   };
   xhr.send(sdata);
 }
-
 // ===================================
-// INPUT LOGICAL STRING
+// INPUT LOGICAL CHANGE
 // ===================================
 
 function setLogicalString(Row, Col, Dir) {
@@ -150,6 +149,26 @@ function setLogicalString(Row, Col, Dir) {
 
 var LogicalPositionStringa = "";
 
+// $(document).ready(function () {
+//   $("#setPositionLogical").change(function () {
+//     var Row = StatusCarrierActPositon_logicalRow;
+//     var Col = $("input[id=setPositionLogical]").val();
+//     var Dir = "0";
+
+//     LogicalPositionStringa = setLogicalString(Row, Col, Dir);
+//     // alert(LogicalPositionStringa);
+//     if (Col == null || Col == 0 || Col > 38) {
+//       $("#set-logical-position").text("");
+//     } else {
+//       $("#set-logical-position").text(LogicalPositionStringa);
+//     }
+
+//     if (Col == 0 || Col > 38) {
+//       alert("Value must be between 1 and 38");
+//     }
+//   });
+// });
+
 // =========================
 //  BUTTON SET LOGICAL POSITION
 // =========================
@@ -162,20 +181,14 @@ document
   .addEventListener("touchstart", onTouchTrueSetLOGICAL);
 
 function onTouchTrueSetLOGICAL(event) {
-  var Row = $("input[id=setPositionLogical]").val();
-  var Col = StatusCarrierActPositon_logicalCol;
+  var Row = StatusCarrierActPositon_logicalRow;
+  var Col = $("input[id=setPositionLogical]").val();
   var Dir = "0";
 
-  if ($("#setDirLogicalPosition_Section2").text() === "B") {
-    Dir = "1";
-  } else {
-    Dir = "0";
-  }
-
-  if (Row == null || Row < 1 || Row > 38) {
+  if (Col == null || Col < 1 || Col > 38) {
     alert("Value must be between 1 and 38");
-    document.getElementById("setPositionLogical").value = "";
     $("#set-logical-position").text("");
+    document.getElementById("setPositionLogical").value = "";
   } else {
     LogicalPositionStringa = setLogicalString(Row, Col, Dir);
     url = "IOWritePositionLogical.html";
