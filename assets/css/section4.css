@@ -1,0 +1,25 @@
+#title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+#setting-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: white;
+  gap: 5%;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+
+}

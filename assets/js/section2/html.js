@@ -91,7 +91,7 @@ document.getElementById("section2").innerHTML = `
       </button>          
     </div>
     <h4>CARRIER SET SPEED</h4>
-    <h4 id="CarrierSetSpeed"></h4>
+    <h4 id="CarrierSetSpeed">0%</h4>
     <div class="form_container">
       <form class="form">
           <input 
@@ -111,7 +111,7 @@ document.getElementById("section2").innerHTML = `
       </button>          
     </div>
     <h4>LIFTER SET SPEED</h4>
-    <h4 id="LifterSetSpeed"></h4>
+    <h4 id="LifterSetSpeed">0%</h4>
   </div>
   
 
